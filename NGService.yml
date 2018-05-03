@@ -1,0 +1,15 @@
+---
+- name : services uninstallation
+  hosts : servers
+  gather_facts : no
+  become : true
+  become_user : root
+  remote_user : tomcat
+  tasks :
+    - name : nginx uninstallation
+      yum :
+        name : "{{item}}"
+        state : absent
+      with_items:
+       - git
+       - nginx
