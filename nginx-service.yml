@@ -1,5 +1,4 @@
----
-- name : create the yum repository for NGINX server
+- name : Nginx Service create the yum repository for NGINX server
   hosts : servers
   gather_facts : no
   become : true
