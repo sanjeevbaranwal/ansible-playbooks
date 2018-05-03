@@ -1,4 +1,3 @@
----
 - name : services uninstallation
   hosts : servers
   gather_facts : no
