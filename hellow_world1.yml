@@ -4,3 +4,17 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
+        
+- name : services uninstallation
+  hosts : servers
+  become_user : root
+  remote_user : tomcat
+  tasks :
+    - name : nginx uninstallation
+      yum :
+        name : "{{item}}"
+        state : absent
+      with_items:
+       - git
+       - nginx
+
