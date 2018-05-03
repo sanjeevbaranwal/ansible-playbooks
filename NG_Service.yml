@@ -1,7 +1,5 @@
 - name : services uninstallation
   hosts : servers
-  gather_facts : no
-  become : true
   become_user : root
   remote_user : tomcat
   tasks :
