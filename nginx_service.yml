@@ -1,8 +1,6 @@
-- name : Nginx Service create the yum repository for NGINX server
-  hosts : all
-  become_user : root
-  user : tomcat
-  roles :
-  - yum
-  - nginx
-  - app
+- name: Hello World Sample
+  hosts: all
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
