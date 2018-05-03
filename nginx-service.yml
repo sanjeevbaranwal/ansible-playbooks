@@ -1,0 +1,12 @@
+---
+- name : create the yum repository for NGINX server
+  hosts : servers
+  gather_facts : no
+  become : true
+  become_user : root
+  user : tomcat
+  roles :
+  - yum
+  - nginx
+  - app
+...
